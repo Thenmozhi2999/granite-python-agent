@@ -1,0 +1,16 @@
+agent:
+  name: granite-python-dev
+  image: thenmozhisekar/granite-python-dev:latest
+  cpu: 2
+  memory: 4Gi
+  disk: 20Gi
+  workspaceMount: /workspace
+  entrypoint: ["/workspace/build.sh"]
+  env:
+    PYTHONUNBUFFERED: "1"
+  cacheVolumes:
+    - name: pip-cache
+      path: /root/.cache/pip
+  secretsInjection:
+    - name: PYPI_TOKEN
+      fromSecret: pypi-token

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "test-app"
+version = "0.1.0"
+description = "Test Python app"
+authors = ["You <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+ruff = "^0.3"
+black = "^24.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
